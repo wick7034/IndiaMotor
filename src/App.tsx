@@ -842,7 +842,7 @@ export default function App() {
         </div>
         
         <div className="text-center mt-20 text-[10px] text-white/10 uppercase tracking-widest font-bold">
-          © 2026 New India Motor Training School. All rights reserved.
+          © 2026 India Motor Training School. @arpanberwal.
         </div>
       </footer>
     </div>
