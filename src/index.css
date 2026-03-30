@@ -2,15 +2,43 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-neon-yellow: #f3ff00;
-  --color-neon-green: #39ff14;
-  --color-dark-bg: #050505;
-  --color-card-bg: #111111;
+  --color-neon-yellow: var(--neon-yellow);
+  --color-neon-green: var(--neon-green);
+  --color-dark-bg: var(--bg-primary);
+  --color-card-bg: var(--bg-secondary);
+  --color-bg-muted: var(--border-primary);
+  --color-text-main: var(--text-primary);
+  --color-text-muted: var(--text-secondary);
+  --color-border-main: var(--border-primary);
+}
+
+:root {
+  --neon-yellow: #f3ff00;
+  --neon-yellow-rgb: 243, 255, 0;
+  --neon-green: #39ff14;
+  --neon-green-rgb: 57, 255, 20;
+  --bg-primary: #050505;
+  --bg-secondary: #111111;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.4);
+  --border-primary: rgba(255, 255, 255, 0.1);
+}
+
+.light {
+  --neon-yellow: #ca8a04; /* Darker yellow for better contrast on light bg */
+  --neon-yellow-rgb: 202, 138, 4;
+  --neon-green: #15803d;  /* Darker green for better contrast on light bg */
+  --neon-green-rgb: 21, 128, 61;
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: rgba(0, 0, 0, 0.5);
+  --border-primary: rgba(0, 0, 0, 0.1);
 }
 
 @layer base {
   body {
-    @apply bg-dark-bg text-white font-sans antialiased selection:bg-neon-yellow/30 cursor-none;
+    @apply bg-dark-bg text-text-main font-sans antialiased selection:bg-neon-yellow/30 cursor-none transition-colors duration-300;
   }
 }
 
@@ -22,7 +50,7 @@
     box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
   }
   .glass-card {
-    @apply bg-card-bg/80 backdrop-blur-md border border-white/10;
+    @apply bg-card-bg/80 backdrop-blur-md border border-border-main;
   }
 }
 
