@@ -594,7 +594,7 @@ export default function App() {
           <div className="w-full md:w-1/2">
             <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">Why Choose Us?</h2>
             <p className="text-lg text-white/50 mb-10 leading-relaxed">
-              Experience our training methodology right here. Use the interactive steering wheel to see how our digital-first approach helps you visualize road maneuvers before you even step into a car.
+              
             </p>
             <div className="grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
